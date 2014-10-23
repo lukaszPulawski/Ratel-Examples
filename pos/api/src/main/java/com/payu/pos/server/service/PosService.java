@@ -1,6 +1,6 @@
-package com.payu.user.server.service;
+package com.payu.pos.server.service;
 
-import com.payu.user.server.model.Pos;
+import com.payu.pos.server.model.Pos;
 
 
 

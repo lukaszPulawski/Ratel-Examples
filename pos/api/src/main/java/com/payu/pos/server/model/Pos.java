@@ -1,4 +1,4 @@
-package com.payu.user.server.model;
+package com.payu.pos.server.model;
 
 import javax.xml.bind.annotation.XmlRootElement;
 

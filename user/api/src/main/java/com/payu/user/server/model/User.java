@@ -19,6 +19,7 @@ public class User implements Serializable {
 	
 	private String pesel;
 	
+	private String optionalMiddleName;
 	
 	private boolean active = true;
 	
@@ -84,6 +85,22 @@ public class User implements Serializable {
 		this.active = active;
 	}
 
+
+	public String getOptionalMiddleName() {
+		return optionalMiddleName;
+	}
+
+	public void setOptionalMiddleName(String optionalMiddleName) {
+		this.optionalMiddleName = optionalMiddleName;
+	}
+
+	@Override
+	public String toString() {
+		return "User [id=" + id + ", name=" + name + ", email=" + email
+				+ ", pesel=" + pesel + ", optionalMiddleName="
+				+ optionalMiddleName + ", active=" + active + "]";
+	}
+
 	@Override
 	public int hashCode() {
 		final int prime = 31;
@@ -92,6 +109,10 @@ public class User implements Serializable {
 		result = prime * result + ((email == null) ? 0 : email.hashCode());
 		result = prime * result + (int) (id ^ (id >>> 32));
 		result = prime * result + ((name == null) ? 0 : name.hashCode());
+		result = prime
+				* result
+				+ ((optionalMiddleName == null) ? 0 : optionalMiddleName
+						.hashCode());
 		result = prime * result + ((pesel == null) ? 0 : pesel.hashCode());
 		return result;
 	}
@@ -119,18 +140,17 @@ public class User implements Serializable {
 				return false;
 		} else if (!name.equals(other.name))
 			return false;
+		if (optionalMiddleName == null) {
+			if (other.optionalMiddleName != null)
+				return false;
+		} else if (!optionalMiddleName.equals(other.optionalMiddleName))
+			return false;
 		if (pesel == null) {
 			if (other.pesel != null)
 				return false;
 		} else if (!pesel.equals(other.pesel))
 			return false;
 		return true;
-	}
-
-	@Override
-	public String toString() {
-		return "User [id=" + id + ", name=" + name + ", email=" + email
-				+ ", pesel=" + pesel + ", active=" + active + "]";
 	}
 	
 	

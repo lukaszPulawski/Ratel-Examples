@@ -4,8 +4,8 @@ import javax.annotation.PostConstruct;
 
 import org.springframework.stereotype.Component;
 
+import com.payu.pos.server.model.Pos;
 import com.payu.training.database.GenericDatabase;
-import com.payu.user.server.model.Pos;
 
 @Component
 public class PosDatabase extends GenericDatabase<Pos> {

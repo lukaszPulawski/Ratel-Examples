@@ -6,8 +6,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import com.payu.discovery.Publish;
-import com.payu.user.server.model.Pos;
-import com.payu.user.server.service.PosService;
+import com.payu.pos.server.model.Pos;
 
 
 @Service

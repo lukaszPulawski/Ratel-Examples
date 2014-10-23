@@ -1,26 +1,27 @@
 package com.payu.soa.example.client;
 
-import com.payu.discovery.Cachable;
-import com.payu.discovery.Discover;
-import com.payu.discovery.RetryPolicy;
-import com.payu.discovery.event.Subscribe;
-import com.payu.order.server.model.Order;
-import com.payu.order.server.service.OrderService;
-import com.payu.transaction.event.TransactionChangedEvent;
-import com.payu.transaction.server.model.Transaction;
-import com.payu.transaction.server.service.TransactionService;
-import com.payu.user.server.model.Pos;
-import com.payu.user.server.model.User;
-import com.payu.user.server.service.NoSuchUserException;
-import com.payu.user.server.service.PosService;
-import com.payu.user.server.service.UserService;
+import java.math.BigDecimal;
+
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.remoting.RemoteConnectFailureException;
 import org.springframework.scheduling.annotation.Async;
 import org.springframework.stereotype.Component;
 
-import java.math.BigDecimal;
+import com.payu.discovery.Cachable;
+import com.payu.discovery.Discover;
+import com.payu.discovery.RetryPolicy;
+import com.payu.discovery.event.Subscribe;
+import com.payu.order.server.model.Order;
+import com.payu.order.server.service.OrderService;
+import com.payu.pos.server.model.Pos;
+import com.payu.pos.server.service.PosService;
+import com.payu.transaction.event.TransactionChangedEvent;
+import com.payu.transaction.server.model.Transaction;
+import com.payu.transaction.server.service.TransactionService;
+import com.payu.user.server.model.User;
+import com.payu.user.server.service.NoSuchUserException;
+import com.payu.user.server.service.UserService;
 
 @Component
 public class TestBean {

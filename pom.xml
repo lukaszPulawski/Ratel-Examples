@@ -13,6 +13,7 @@
         <module>pos</module>
         <module>user</module>
         <module>transaction</module>
+		<module>merchant</module>
         <module>client</module>
     </modules>
 
