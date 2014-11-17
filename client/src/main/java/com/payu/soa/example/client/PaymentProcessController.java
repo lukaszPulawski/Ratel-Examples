@@ -9,10 +9,12 @@ public class PaymentProcessController {
 
 	private static Logger LOGGER = LoggerFactory.getLogger(TestBean.class);
 
+
 	public PaymentProcessController() {
 	}
 
 	public void pay(int sessionId, String paymentMethodBrand, Long posId) {
+
 		LOGGER.info("Starting payment process");
 
 		// TODO: implement your payment process here
