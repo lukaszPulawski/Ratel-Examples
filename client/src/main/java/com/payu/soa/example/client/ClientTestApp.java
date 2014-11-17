@@ -8,7 +8,7 @@ import org.springframework.context.annotation.Configuration;
 import org.springframework.context.annotation.Import;
 import org.springframework.context.annotation.PropertySource;
 
-@ComponentScan(basePackages = "com.payu.soa")
+@ComponentScan(basePackages = "com.payu.soa.example")
 @Configuration
 @EnableAutoConfiguration
 @PropertySource("classpath:client.properties")

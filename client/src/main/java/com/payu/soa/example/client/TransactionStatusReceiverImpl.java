@@ -12,7 +12,7 @@ public class TransactionStatusReceiverImpl implements TransactionStatusReceiver 
     private static Logger LOGGER = LoggerFactory.getLogger(TransactionStatusReceiverImpl.class);
 
     @Subscribe
-    public void receiveTransactionStatus(TransactionChangedEvent event) {
+    public void receiveEvent(TransactionChangedEvent event) {
         LOGGER.info("Transaction status change received: {}", event.getTransStatus());
     }
 
