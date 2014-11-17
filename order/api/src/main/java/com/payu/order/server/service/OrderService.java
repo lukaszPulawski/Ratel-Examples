@@ -40,5 +40,11 @@ public interface OrderService {
 	 */
 	public Collection<Order> getOrdersByUserId(long userId);
 
+	/**
+	 * Updates a given order at underlaying persistance layer
+	 * @param order the order to store
+	 */
+	void updateOrder(Order order);
+
 
 }

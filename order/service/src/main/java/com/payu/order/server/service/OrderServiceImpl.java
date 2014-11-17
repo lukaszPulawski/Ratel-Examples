@@ -49,4 +49,11 @@ public class OrderServiceImpl implements OrderService {
 				.collect(Collectors.toCollection(ArrayList::new));
 	}
 
+
+	@Override
+	public void updateOrder(Order order) {
+		database.update(order);
+		
+	}
+
 }

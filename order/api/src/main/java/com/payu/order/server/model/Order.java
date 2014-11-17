@@ -15,6 +15,8 @@ public class Order implements Serializable {
 	private String what;
 	
 	private BigDecimal amount;
+	
+	private OrderStatus status;
 
 	public Order() {
 	}
@@ -56,10 +58,13 @@ public class Order implements Serializable {
 		this.userId = userId;
 	}
 
+
+	
+	
 	@Override
 	public String toString() {
 		return "Order [id=" + id + ", userId=" + userId + ", what=" + what
-				+ ", amount=" + amount + "]";
+				+ ", amount=" + amount + ", status=" + status + "]";
 	}
 
 	@Override
@@ -68,6 +73,7 @@ public class Order implements Serializable {
 		int result = 1;
 		result = prime * result + ((amount == null) ? 0 : amount.hashCode());
 		result = prime * result + (int) (id ^ (id >>> 32));
+		result = prime * result + ((status == null) ? 0 : status.hashCode());
 		result = prime * result + (int) (userId ^ (userId >>> 32));
 		result = prime * result + ((what == null) ? 0 : what.hashCode());
 		return result;
@@ -89,6 +95,8 @@ public class Order implements Serializable {
 			return false;
 		if (id != other.id)
 			return false;
+		if (status != other.status)
+			return false;
 		if (userId != other.userId)
 			return false;
 		if (what == null) {
@@ -97,6 +105,14 @@ public class Order implements Serializable {
 		} else if (!what.equals(other.what))
 			return false;
 		return true;
+	}
+
+	public OrderStatus getStatus() {
+		return status;
+	}
+
+	public void setStatus(OrderStatus status) {
+		this.status = status;
 	}
 	
 	
